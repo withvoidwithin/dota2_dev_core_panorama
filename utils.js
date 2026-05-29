@@ -4,7 +4,7 @@
 ////               https://withvoidwithin.github.io/
 //// ════════════════════════════════════════════════════════════════
 
-GameUI._InitPanel = function(context, panel){
+GameUI._InitPanel = function(context, panel = context){
     for(const child of panel.Children()){
         const callback_string = child.GetAttributeString("_init", "none")
 
