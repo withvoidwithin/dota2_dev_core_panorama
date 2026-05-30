@@ -8,9 +8,7 @@ GameUI._InitPanel = function(context, panel = context){
     for(const child of panel.Children()){
         const callback_string = child.GetAttributeString("_init", "none")
 
-        if(callback_string != "none" && callback_string != "__inited"){
-            child.SetAttributeString("_init", "__inited")
-            
+        if(callback_string != "none"){            
             context.__init_panel = child
 
             const is_empty = /\(\s*\)$/.test(callback_string)
